@@ -436,7 +436,11 @@ img {
   padding-top: 55px;
   padding-bottom: 57px;
 }
+.footer .container {
+  display: flex;
+}
 .footer-text {
+  margin-left: 55px;
   font-weight: 600;
   font-size: 11px;
   line-height: 1.36;
@@ -444,8 +448,16 @@ img {
 
   color: #9da4bd;
 }
+.footer-list {
+  display: flex;
+  margin-left: auto;
+  margin-right: 55px;
+}
+.footer-item:not(:first-child) {
+  margin-left: 40px;
+}
 .footer-link {
-  font-weight: 600;
+  font-weight: 600;display: flex;
   font-size: 11px;
   line-height: 1.36x;
   letter-spacing: 0.2em;
