@@ -171,6 +171,12 @@ img {
   background-color: var(--second-title-color);
   padding: 272px 0 206px 96px;
   flex-grow: 1;
+  background-image: linear-gradient(
+    rgba(25, 28, 38, 0.5),
+    rgba(25, 28, 38, 0.5)
+    ), 
+    url(../images/hero-img.jpg);
+    background-size: cover;
 }
 /*----------ABOUT------------*/
 .about {
@@ -183,6 +189,7 @@ img {
 .about-list {
   display: flex;
   margin-right: 64px;
+  flex-shrink: 0;
 }
 .about-item + .about-item {
   margin-left: 30px;
@@ -216,7 +223,11 @@ img {
 }
 /*----------PRICES------------*/
 .prices {
-  background-color: #303030;
+  background-image: url(../images/prices.png);
+  background-color: rgba(17, 19, 25, 1);
+  background-repeat: no-repeat;
+  background-size:cover;
+  margin: 0 auto;
   padding-top: 130px;
   padding-bottom: 130px;
 }
@@ -348,6 +359,32 @@ img {
   letter-spacing: 0.02em;
 
   color: var(--accent-color);
+  margin-bottom: var(--typical-margin-bottom);
+}
+.masters-soc-list {
+  display: flex;
+  justify-content: center;
+}
+.masters-soc-item + .masters-soc-item {
+  margin-left: 10px;
+}
+.masters-soc-link {
+  width: 44px;
+  height: 44px;
+  background-color: #ffffff;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #000;
+}
+.masters-soc-link:hover,
+.masters-soc-link:focus {
+  background-color: var(--accent-color);
+  color: #ffffff;
+}
+.masters-soc-icon {
+  fill: currentColor;
 }
 /*------GALLERY-------*/
 .gallery {
