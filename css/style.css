@@ -409,8 +409,15 @@ img {
 .feedback .container {
   display: flex;
   background-color: rgba(25, 28, 38, 1);
+
   padding-top: 130px;
   padding-bottom: 130px;
+}
+.wrapper {
+  background-image: url(../images/feedback.png);
+  background-position: right top;
+  background-size: 625px 644px;
+  background-repeat: no-repeat;
 }
 .form {
   width: 50%;
@@ -437,6 +444,7 @@ img {
 
   color: var(--main-title-color);
   margin-bottom: 40px;
+  margin-left: 99px;
 }
 .contacts-link {
   font-family: "Open Sans";
