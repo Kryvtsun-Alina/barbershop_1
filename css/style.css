@@ -482,6 +482,9 @@ img {
   margin-bottom: 40px;
   margin-left: 99px;
 }
+.contacts-item:not(:last-child) {
+  margin-bottom: var(--typical-margin-bottom);
+}
 .contacts-link {
   font-family: "Open Sans";
   font-style: normal;
@@ -489,11 +492,27 @@ img {
   font-size: 18px;
   line-height: 1.67;
   letter-spacing: 0.02em;
+  display: flex;
+  align-items: center;
 
   color: rgba(157, 164, 189, 1);
+  margin-left: 103px;
 }
-.contacts-link:not(:last-child) {
-  margin-bottom: var(--typical-margin-bottom);
+.contacts-link-map {
+  align-items: flex-start;
+  
+}
+.contacts-icon-map {
+  margin-right: 16px;
+  fill: rgba(157, 164, 189, 1);
+}
+.contacts-icon-phone {
+  fill: rgba(157, 164, 189, 1);
+  margin-right: 16px;
+}
+.contacts-icon-mail {
+  fill: rgba(157, 164, 189, 1);
+  margin-right: 16px;
 }
 .contacts-text {
   font-weight: 600;
@@ -504,6 +523,19 @@ img {
   color: rgba(255, 255, 255, 1);
   margin-top: 70px;
   margin-bottom: var(--typical-margin-bottom);
+  display: flex;
+  align-items: center;
+}
+.contacts-text::before {
+  content: '';
+  width: 60px;
+  height: 1px;
+  left: 816px;
+  top: 4710px;
+
+  background: rgba(157, 164, 189, 0.4);
+  margin-right: 20px;
+  margin-left: 100px;
 }
 .contacts-bottom-text {
   font-size: 18px;
@@ -511,6 +543,7 @@ img {
   letter-spacing: 0.02em;
 
   color: rgba(157, 164, 189, 1);
+  margin-left: 99px;
 }
 /*------FOOTER-------*/
 .footer {
