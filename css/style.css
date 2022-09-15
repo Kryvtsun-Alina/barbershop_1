@@ -44,6 +44,17 @@ img {
   line-height: 1.36;
   letter-spacing: 0.1em;
   text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  color: rgba(157, 164, 189, 0.6);
+}
+.top-text::before {
+  content: '';
+  width: 63px;
+  height: 1px;
+  background-color: currentColor;
+  margin-right: 21px;
+ 
 }
 .bottom-text {
   font-size: 18px;
@@ -68,6 +79,7 @@ img {
   text-transform: uppercase;
   border: 1px solid #ff6c00;
   border-radius: 25px;
+  background-color: transparent;
 }
 .visualy-hidden {
   position: absolute;
@@ -223,6 +235,7 @@ img {
 }
 /*----------PRICES------------*/
 .prices {
+  max-width: 1280px;
   background-image: url(../images/prices.png);
   background-color: rgba(17, 19, 25, 1);
   background-repeat: no-repeat;
@@ -230,6 +243,7 @@ img {
   margin: 0 auto;
   padding-top: 130px;
   padding-bottom: 130px;
+
 }
 .prices-top-text {
   color: rgba(157, 164, 189, 06);
@@ -245,14 +259,29 @@ img {
   margin-bottom: 50px;
 }
 .prices-list {
-  border: 1px solid #ffffff;
   padding: 30px 40px;
   flex-grow: 1;
+}
+.prices-light {
+  background: linear-gradient(180deg, #171A24 0%, rgba(23, 26, 36, 0.2) 100%);
+}
+.prices-dark {
+  background: linear-gradient(180deg, #090B13 0%, rgba(9, 11, 19, 0.2) 100%);
 }
 .prices-item {
   display: flex;
   justify-content: space-between;
   margin-bottom: var(--typical-margin-bottom);
+  align-items: baseline;
+}
+.prices-item::after {
+  content:"";
+  width: 100px;
+  height: 1px;
+  background-color: rgba(157, 164, 189, 0.12);
+  flex-grow: 1;
+  margin-left: 6px;
+  margin-right: 6px;
 }
 .prices-item:last-child {
   margin-bottom: 0;
@@ -263,6 +292,9 @@ img {
   line-height: 1.67;
   letter-spacing: 0.02em;
   color: rgba(157, 164, 189, 1);
+}
+.prices-item-text:last-child {
+  order: 1;
 }
 
 .prices-btn {
@@ -406,24 +438,25 @@ img {
 }
 
 /*------FORM-------*/
-.feedback .container {
+.contacts-wrap .container {
   display: flex;
-  background-color: rgba(25, 28, 38, 1);
-
   padding-top: 130px;
   padding-bottom: 130px;
 }
-.wrapper {
+.online {
+  flex-grow: 1;
+}
+.contacts-wrap {
+  max-width: 1280px;
+  margin: 0 auto;
+  background-color: rgba(25, 28, 38, 1);
   background-image: url(../images/feedback.png);
   background-position: right top;
-  background-size: 625px 644px;
   background-repeat: no-repeat;
-}
-.form {
-  width: 50%;
+  background-size: calc(50% - 15px);
 }
 
-.form-title {
+.online-title {
   font-family: "Raleway", "Tahoma";
   font-weight: 700;
   font-size: 42px;
@@ -435,6 +468,9 @@ img {
 }
 
 /*------CONTACTS-------*/
+.contacts {
+  width: calc(50% - 15px);
+}
 .contacts-title {
   font-family: "Raleway", "Tahoma";
   font-weight: 700;
