@@ -28,7 +28,7 @@
         </nav>
         <div class="header-connect">
         <a href="tel:+380441111111" class="header-tel link">+38 044 111 11 11</a>
-        <button type=button class="header-btn btn">онлайн-запись</button>
+        <button type=button class="header-btn btn" data-modal-open>онлайн-запись</button>
     </div>
     </div>
     </header>
@@ -157,7 +157,7 @@
                         class="masters-img">
                         <p class="masters-inside-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Non, commodi autem modi quo alias, eveniet suscipit cum labore neque, voluptas optio rerum quaerat officiis expedita porro totam? Totam, perspiciatis libero?</p>
                         </div>
-                        <h3 lang="en" class="masters-item-title">John Smith</h2>
+                        <h3 lang="en" class="masters-item-title">John Smith</h3>
                         <p lang="en" class="masters-item-text">Extreme Barber</p>
                         <ul class="masters-soc-list list">
                             <li class="masters-soc-item">
@@ -197,7 +197,7 @@
                         class="masters-img">
                         <p class="masters-inside-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Non, commodi autem modi quo alias, eveniet suscipit cum labore neque, voluptas optio rerum quaerat officiis expedita porro totam? Totam, perspiciatis libero?</p>
                         </div>
-                        <h3 lang="en" class="masters-item-title">Michele Doe</h2>
+                        <h3 lang="en" class="masters-item-title">Michele Doe</h3>
                         <p lang="en" class="masters-item-text">Extreme Barber</p>
                         <ul class="masters-soc-list list">
                             <li class="masters-soc-item">
@@ -237,7 +237,7 @@
                         class="masters-img">
                         <p class="masters-inside-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Non, commodi autem modi quo alias, eveniet suscipit cum labore neque, voluptas optio rerum quaerat officiis expedita porro totam? Totam, perspiciatis libero?</p>
                         </div>
-                        <h3 lang="en" class="masters-item-title">Alan Black</h2>
+                        <h3 lang="en" class="masters-item-title">Alan Black</h3>
                         <p lang="en" class="masters-item-text">Extreme Barber</p>
                         <ul class="masters-soc-list list">
                             <li class="masters-soc-item">
@@ -332,5 +332,15 @@
             </ul>
             </div>
         </footer>
+        <div class="backdrop is-hidden" data-modal>
+            <div class="modal">
+                <button type="button" class="modal-close-btn" data-modal-close>
+                    <svg class="modal-close-icon" width="18" height="18">
+                        <use href="images/symbol-defs.svg#icon-close"></use>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <script src="./js/modal.js"></script>
 </body>
 </html>
