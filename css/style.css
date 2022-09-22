@@ -696,8 +696,8 @@ letter-spacing: 0.05em;
   left: 50%;
   transform: translate(-50%, -50%) scale(1) rotate(0deg);
 
-  min-width: 528px;
-  min-height: 581px;
+  width: 528px;
+  height: 581px;
 
   background: #ffffff;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
@@ -706,7 +706,7 @@ letter-spacing: 0.05em;
 
   transition: transform 300ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.modal-btn-close {
+.modal-close {
   position: absolute;
   width: 30px;
   height: 30px;
@@ -722,13 +722,16 @@ letter-spacing: 0.05em;
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 50%;
   cursor: pointer;
-  transition: fill 300ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.modal-close:hover,
-.modal-close:focus {
-  fill: var(--accent-color--);
+.modal-icon-close:hover {
+ color: var(--accent-color--);
 }
+/* .modal-icon-close {
+  fill: currentColor;
+} */
+
 .is-hidden {
   visibility: hidden;
   opacity: 0;
@@ -736,4 +739,72 @@ letter-spacing: 0.05em;
 }
 .backdrop.is-hidden .modal {
   transform: scale(0.8) rotate(-290deg) translate(-50%, -50%);
+}
+
+/*------MODAL-FORM-------*/
+.modal-form {
+  padding: 40px;
+}
+.modal-title {
+  font-family: 'Roboto';
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.15;
+  text-align: center;
+  letter-spacing: 0.03em;
+
+  color: #212121;
+  margin-bottom: 12px;
+}
+.modal-label {
+  font-family: 'Roboto';
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.01em;
+
+  color: #757575;
+  margin-bottom: 12px;
+}
+.modal-input-wrap{
+  position: relative;
+  display: block;
+  margin-bottom: 10px;
+  
+}
+.modal-input {
+  
+  width: 100%;
+  height: 40px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  
+  padding-left: 10px;
+}
+
+.modal-icon {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+
+}
+.modal-input::placeholder {
+  font-family: 'Roboto';
+  font-size: 10px;
+  line-height: 1.17;
+  letter-spacing: 0.01em;
+
+  color: #757575;
+  padding-left: 35px;
+}
+.modal-text {
+  width: 448px;
+  height: 120px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  resize: none;
+}
+.modal-btn {
+  display: block;
+  margin: 0 auto;
 }
