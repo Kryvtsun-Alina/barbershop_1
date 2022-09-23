@@ -732,11 +732,11 @@ letter-spacing: 0.05em;
   fill: currentColor;
 } */
 
-.is-hidden {
+/* .is-hidden {
   visibility: hidden;
   opacity: 0;
   pointer-events: none;
-}
+} */
 .backdrop.is-hidden .modal {
   transform: scale(0.8) rotate(-290deg) translate(-50%, -50%);
 }
@@ -781,7 +781,7 @@ letter-spacing: 0.05em;
   padding-left: 30px;
   outline: none;
   color: #000;
-  transition: border-color 300ms;
+  transition: border-color 300ms liner;
 
 }
 .modal-input:hover,
@@ -819,6 +819,8 @@ letter-spacing: 0.05em;
   resize: none;
   outline: none;
   transition: border-color 300ms;
+  margin-bottom: 20px;
+  
 }
 .modal-text:hover,
 .modal-text:focus {
@@ -827,4 +829,51 @@ letter-spacing: 0.05em;
 .modal-btn {
   display: block;
   margin: 0 auto;
+  transform: scale(1);
+  transition: transform 300ms;
+}
+.modal-btn:hover {
+  transform: scale(1.1);
+}
+.modal-field {
+  margin-bottom: 30px;
+}
+
+.check-text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.check-text::before {
+  content: '';
+  width: 16px;
+  height: 15px;
+  border: 2px solid #212121;
+  border-radius: 2px;
+  display: block;
+  margin-right: 8px;
+}
+.check-text-span {
+  font-family: 'Roboto';
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  color: #757575;
+  margin-right: 4px;
+}
+.check-text-link {
+  font-family: 'Roboto';
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  color: var(--accent-color);
+}
+.input-check:checked + .check-text::before {
+  background-color: var(--accent-color);
+  border: none;
+  background-image: url(../images/check.svg);
+  background-repeat: no-repeat;
+  background-position: center;
 }
