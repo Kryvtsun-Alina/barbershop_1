@@ -725,8 +725,8 @@ letter-spacing: 0.05em;
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.modal-icon-close:hover {
- color: var(--accent-color--);
+.modal-close:hover .modal-icon-close {
+  fill: var(--accent-color--);
 }
 /* .modal-icon-close {
   fill: currentColor;
@@ -778,7 +778,19 @@ letter-spacing: 0.05em;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
   
-  padding-left: 10px;
+  padding-left: 30px;
+  outline: none;
+  color: #000;
+  transition: border-color 300ms;
+
+}
+.modal-input:hover,
+.modal-input:focus {
+  border-color: var(--accent-color);
+}
+.modal-input:hover + .modal-icon,
+.modal-input:focus + .modal-icon {
+    fill: var(--accent-color);
 }
 
 .modal-icon {
@@ -786,6 +798,8 @@ letter-spacing: 0.05em;
   left: 10px;
   top: 50%;
   transform: translateY(-50%);
+  transition: fill 300ms;
+
 
 }
 .modal-input::placeholder {
@@ -795,7 +809,7 @@ letter-spacing: 0.05em;
   letter-spacing: 0.01em;
 
   color: #757575;
-  padding-left: 35px;
+  padding-left: 10px;
 }
 .modal-text {
   width: 448px;
@@ -803,6 +817,12 @@ letter-spacing: 0.05em;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
   resize: none;
+  outline: none;
+  transition: border-color 300ms;
+}
+.modal-text:hover,
+.modal-text:focus {
+  border-color: var(--accent-color);
 }
 .modal-btn {
   display: block;
