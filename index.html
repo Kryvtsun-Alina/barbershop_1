@@ -119,19 +119,19 @@
                 <div class="container">
                     <div class="reasons-count">
                 <ul class="reasons-list list">
-                    <li class="reasons-item">
+                    <li class="reasons-item-tl">
                         <span class="reasons-item-count">600</span>
                         <p class="reasons-item-text">Довольных клиентов в день</p>
                     </li>
-                    <li class="reasons-item">
+                    <li class="reasons-item-tr">
                         <span class="reasons-item-count">50</span>
                         <p class="reasons-item-text">Наград за отличный сервис</p>
                     </li>
-                    <li class="reasons-item">
+                    <li class="reasons-item-bl">
                         <span class="reasons-item-count">20</span>
                         <p class="reasons-item-text">Наград за отличный сервис</p>
                     </li>
-                    <li class="reasons-item">
+                    <li class="reasons-item-br">
                         <span class="reasons-item-count">100</span>
                         <p class="reasons-item-text">Подарков постоянным клиентам</p>
                     </li>
@@ -288,6 +288,39 @@
                 <div class="container">
             <section class="online">
                 <h2 class="online-title">Онлайн-запись</h2>
+                <form class="online-form">
+                    <div class="online-inputs">
+                    <div class="online-field">
+                        <input type="text" 
+                        id="online-input" 
+                        name="online-name" 
+                        class="online-input"
+                        placeholder=" "
+                        required>
+                        <label for="online-name" 
+                        class="online-label">Имя*</label>
+                    </div>
+                    <div class="online-field">
+                        <input type="tel" 
+                        id="online-tel" 
+                        name="online-tel" 
+                        class="online-input"
+                        placeholder=" "
+                        required>
+                        <label for="online-tel" 
+                        class="online-label">Телефон*</label>
+                    </div>
+                    </div>
+                    <div class="online-text-field">
+                        <textarea name="online-mess" 
+                        id="online-mess" 
+                        class="online-mess"
+                        placeholder=" "></textarea>
+                        <label for="online-mess" 
+                        class="mess-label">сообщение</label>
+                    </div>
+                    <button type="submit" class="btn online-btn">отправить</button>
+                </form>
             </section>
             <section class="contacts">
                 <h2 class="contacts-title">Контакты</h2>
@@ -309,9 +342,9 @@
                             </li>
                         <li class="contacts-item">
                             <a href="mailto:barbershop@email.com" class="contacts-link link">
-                                 <svg class="contacts-icon-mail contacts-icon" width="24" height="24">
-                                    <use href="images/symbol-defs.svg#icon-mail"></use>
-                                </svg>
+                                 <svg class="contacts-isymbol-defs.svg#icon-mail"></use>
+                                </svg>con-mail contacts-icon" width="24" height="24">
+                                    <use href="images/
                                 barbershop@email.com
                             </a>
                             </li>
@@ -335,9 +368,6 @@
         <div class="backdrop is-hidden" data-modal>
         <div class="modal">
             <button class="modal-close" type="button" data-modal-close>
-             <svg class="modal-icon-close" width="18" height="18">
-               <use href="./images/symbol-defs.svg#icon-close"></use>
-             </svg>
             </button>
             <form class="modal-form">
                 <p class="modal-title">Оставьте свои данные, мы вам перезвоним</p>

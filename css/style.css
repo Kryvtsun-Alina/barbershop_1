@@ -340,23 +340,48 @@ letter-spacing: 0.05em;
 .reasons {
   padding-top: 114px;
   padding-bottom: 157px;
+
 }
 .reasons .container {
   display: flex;
-  padding-top: 143px;
-  padding-bottom: 137px;
   margin: 0 auto;
 }
 .reasons-count {
-  width: calc(50% + 15px);
+  width: 655px;
+  height: 100%;
+  position: relative;
 }
-.reasons-item {
+.reasons-item-tl,
+.reasons-item-tr,
+.reasons-item-bl,
+.reasons-item-br {
   width: 170px;
   height: 130px;
-  border: 1px solid #000;
+  border: none;
+  background-color: rgba(247, 247, 247, 1);
+  padding: 20px 24px;
+  position: absolute;
+}
+.reasons-item-tl {
+  top: 0;
+  left: 0;
+}
+.reasons-item-tr {
+  top: 35px;
+  left: 200px;
+  
+}
+.reasons-item-bl {
+  top: 163px;
+  left: 0;
+}
+.reasons-item-br {
+  top: 198px;
+  left: 200px;
 }
 
 .reasons-item-count {
+  display: block;
   font-weight: 700;
   font-size: 42px;
   line-height: 1.36;
@@ -376,7 +401,9 @@ letter-spacing: 0.05em;
 
   color: #303030;
 }
-
+.reasons-content {
+  width: 625px;
+}
 .reasons-top-text {
   color: var(--top-text);
   margin-bottom: var(--typical-margin-bottom);
@@ -514,6 +541,8 @@ letter-spacing: 0.05em;
   display: flex;
   padding-top: 130px;
   padding-bottom: 130px;
+  padding-right: 40px;
+  padding-left: 40px;
 }
 .online {
   flex-grow: 1;
@@ -538,6 +567,95 @@ letter-spacing: 0.05em;
 
   color: var(--main-title-color);
 }
+.online-inputs {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 44px;
+}
+.online-field {
+  width: 260px;
+  height: 24px;
+  position: relative;
+}
+.online-field:not(:last-child) {
+  margin-right: 30px; 
+}
+.online-input {
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid rgba(157, 164, 189, 0.4);
+  outline: none;
+  transition: border-color 300ms;
+  color: #9da4bd;
+}
+.online-input:focus {
+  border-color: #ffffff;
+}
+.online-input:focus + .online-label {
+  color: #ffffff;
+  transform: translateY(-100%);
+}
+.online-input:not(:placeholder-shown) + .online-label {
+  color: #ffffff;
+  transform: translateY(-100%);
+}
+.online-label {
+  position: absolute;
+  top: 0;left: 0;
+  font-family: 'Open Sans';
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 1.36;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+
+  color: rgba(157, 164, 189, 0.4);  
+  transition: transform 300ms, color 300ms;
+}
+.online-text-field {
+  height: 76px;
+  position: relative;
+  margin-bottom: 44px;
+}
+.online-mess {
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid rgba(157, 164, 189, 0.4);
+  resize: none;
+  outline: none;
+  transition: transform 300ms, color 300ms;
+  color: #9da4bd;
+}
+.online-mess:focus {
+  border-color: #ffffff;
+}
+.online-mess:focus + .mess-label {
+  color: #ffffff;
+  transform: translateY(-100%);
+}
+.online-mess:not(:placeholder-shown) + .mess-label {
+  color: #ffffff;
+  transform: translateY(-100%);
+}
+.mess-label {
+  position: absolute;
+  top: 0;left: 0;
+  font-family: 'Open Sans';
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 1.36;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+
+  color: rgba(157, 164, 189, 0.4);  
+  transition: transform 300ms, color 300ms;
+}
+
+
 
 /*------CONTACTS-------*/
 .contacts {
@@ -719,24 +837,30 @@ letter-spacing: 0.05em;
   padding: 0;
 
   background-color: transparent;
+  background-image: url(../images/close-black-18dp\ \(2\)\ 1.svg);
+  background-repeat: no-repeat;
+  background-position: center;
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 50%;
   cursor: pointer;
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.modal-close:hover .modal-icon-close {
-  fill: var(--accent-color--);
+.modal-close:hover {
+  background-image: url(../images/icon-close-accent.png);
+  background-size: 12px 12px;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 /* .modal-icon-close {
   fill: currentColor;
 } */
 
-/* .is-hidden {
+.is-hidden {
   visibility: hidden;
   opacity: 0;
   pointer-events: none;
-} */
+}
 .backdrop.is-hidden .modal {
   transform: scale(0.8) rotate(-290deg) translate(-50%, -50%);
 }
