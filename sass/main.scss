@@ -1,0 +1,27 @@
+//utils//
+@import './utils/root';
+@import './utils/hidden';
+//base/
+@import './base/reset';
+@import './base/comon';
+//components//
+@import './components/_top-text';
+@import './components/modal';
+@import './components/modal-form';
+@import './components/container';
+@import './components/btn';
+@import './components/title';
+@import './components/botom-text';
+//layout//
+@import './layout/header';
+@import './layout/hero';
+@import './layout/about';
+@import './layout/prices';
+@import './layout/reasons';
+@import './layout/reasons';
+@import './layout/gallery';
+@import './layout/online-form';
+@import './layout/footer';
+@import './layout/masters';
+
+
